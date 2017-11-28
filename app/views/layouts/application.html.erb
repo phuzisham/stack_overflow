@@ -8,7 +8,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <%= link_to('Home', root_path) %>
+
+    <h1 id="name">Stack Overflow</h1>
+
+    <% if current_user %>
+      <%= current_user.email %> | <%= link_to "Sign out", '/signout' %>
+    <% else %>
+      <%= link_to "Sign up", 'signup' %> | <%= link_to "Sign in", '/signin' %>
+    <% end %>
+  </header>
+  <br><br><br>
   <body>
-    <%= yield %>
-  </body>
+    <div class="container">
+      <% if flash[:alert] %>
+        <div class="card">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+      <% if flash[:notice] %>
+        <div class="card">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
+</body>
 </html>
