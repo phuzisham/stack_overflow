@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   root :to => 'application#index'
 
-  # resources :products do
-  #   resources :reviews
-  # end
-  #
+  resources :questions
+
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 

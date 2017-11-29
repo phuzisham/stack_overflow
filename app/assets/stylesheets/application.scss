@@ -1,13 +1,32 @@
 @import "bootstrap";
 
+$dusty: #96858F;
+$dustyLight: #ccb9c4;
 $lav: #6D7993;
+$overcast: #9099A2;
+$paper: #D5D5D5;
+
+body {
+  background-color: $overcast;
+}
+
+body a {
+  color: $dustyLight;
+}
 
 header {
   background-color: $lav;
   padding: 20px;
+  color: $paper;
 }
 
 header h1 {
   display: inline;
   float: right;
+}
+
+.card {
+  background-color: $paper;
+  padding: 20px;
+  margin: 20px;
 }
