@@ -1,1 +1,13 @@
 @import "bootstrap";
+
+$lav: #6D7993;
+
+header {
+  background-color: $lav;
+  padding: 20px;
+}
+
+header h1 {
+  display: inline;
+  float: right;
+}
